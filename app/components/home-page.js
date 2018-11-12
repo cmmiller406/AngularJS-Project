@@ -1,7 +1,7 @@
 "use strict";
 
 const homePage = {
-    template: `<p>home</p>`,
+    templateUrl: "app/components/home-page.html",
     controller: ["ProjectService", function(ProjectService) {
         const vm= this;
     }]
