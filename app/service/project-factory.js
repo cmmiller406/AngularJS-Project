@@ -1,7 +1,12 @@
 "use strict";
 
-function FilmFinderFactory($http) {
+function FilmFinderFactory($http, $location) {
   let jsonPayload = null;   
+
+  const loadWatch = () => {
+    $location.path("/watchlist-page");
+
+  };
 
   const searchMovie = (keyword) => {
  
@@ -15,7 +20,8 @@ function FilmFinderFactory($http) {
   };
 
   return {
-    searchMovie
+    searchMovie,
+    loadWatch
   };
 }
 
