@@ -24,14 +24,17 @@ body {
     
 }
 
-nav {
+
+header {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     height: 60px;
     background-color: black;
     color: silver;
     padding: 10px;
+    margin-top: 20px;
 }
 
 #site-title {
@@ -44,17 +47,24 @@ nav {
 #watch-btn {
     display: flex;
     justify-content: center;
-    height: 40px;
-    width: 200px;
+    height: 60px;
+    width: 240px;
     border-radius: 5px;
     background-color: maroon;
     border: 1px solid silver;
     color: silver;
 }
 
+#watch-btn:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
 .search-container {
     display: flex;
     align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
     
 }
 
@@ -88,6 +98,11 @@ nav {
     color: silver;
 }
 
+#search-btn:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
 #results-title {
     font-family: 'Limelight';
     font-size: 40px;
@@ -100,6 +115,7 @@ nav {
     border-radius: 5px;
     width: 90%;
     background-color: silver;
+    height: 80%;
 }
 
 ul {
@@ -111,4 +127,50 @@ i {
     margin-right: 5px;
 }
 
+.single-result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+    height: 150px;
+    align-items: center;
+    font-family: "Space Mono";
+    border-bottom: 1px dotted black;
+    padding-bottom: 8px;
+    margin-top: 24px;
+}
+
+.result-img {
+    border-radius: 5px;
+    height: 148px;
+    width: 148px;
+}
+
+
+
+
+
+.material-icons:hover{
+    color: yellow;
+    font-weight: bold;
+    cursor: pointer;
+
+    
+
+}
+
+.material-icons:click {
+    color: yellow;
+}
+
+#results-title {
+    font-weight: bolder;
+    margin-bottom: 40px;
+    border-bottom: 1px solid black;
+}
+
+.result-title {
+    font-size: 2em;
+}
 

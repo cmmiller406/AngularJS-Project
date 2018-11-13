@@ -1,6 +1,6 @@
 "use strict";
 
-const favoritesPage = {
+const watchListPage = {
     templateUrl: "app/components/watchlist-page.html"
     
     ,
@@ -16,6 +16,6 @@ const favoritesPage = {
 
 angular 
     .module("App")
-    .component("favoritesPage", favoritesPage);
+    .component("watchListPage", watchListPage);
 
 // form is hidden but need to rework it to get it to reappear
