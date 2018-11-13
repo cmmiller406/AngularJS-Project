@@ -1,7 +1,7 @@
 "use strict";
 
 const searchPage = {
-    template: `<p>search</p>`,
+    templateUrl: "app/components/search-page.html",
     controller: ["ProjectService", function(ProjectService) {
         const vm= this;
     }]

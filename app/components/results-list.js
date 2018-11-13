@@ -1,7 +1,7 @@
 "use strict";
 
 const resultsList = {
-    template: `<p>results</p>`,
+    templateUrl: "app/components/results-list.html",
     controller: ["ProjectService", function(ProjectService) {
         const vm= this;
     }]
