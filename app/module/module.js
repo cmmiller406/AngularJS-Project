@@ -8,8 +8,8 @@ angular
             .when("/home-page", {
                 template: "<home-page></home-page>"
             })
-            .when("/favorites-page", {
-                template: "<favorites-page></favorites-page>"
+            .when("/watchlist-page", {
+                template: "<watchlist-page></watchlist-page>"
             })
             .when("/results-list", {
                 template: "<results-list></results-list>"
