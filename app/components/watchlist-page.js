@@ -1,9 +1,7 @@
 "use strict";
 
-const favoritesPage = {
-    templateUrl: "app/components/watchlist-page.html"
-    
-    ,
+const watchlistPage = {
+    templateUrl: "app/components/watchlist-page.html",
     controller: ["ProjectService", function(ProjectService) {
         const vm= this;
         vm.showForm = () => {
@@ -16,6 +14,6 @@ const favoritesPage = {
 
 angular 
     .module("App")
-    .component("favoritesPage", favoritesPage);
+    .component("watchlistPage", watchlistPage);
 
 // form is hidden but need to rework it to get it to reappear
