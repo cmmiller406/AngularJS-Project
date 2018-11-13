@@ -1,13 +1,15 @@
-<nav>
+<header>
     <p id="site-title">Film Finder</p>
-    <button id="watch-btn"><i class="material-icons">movie</i> View Watchlist</button>
-</nav>
+
+    <button ng-click="$ctrl.displayList();" id="watch-btn"><i class="material-icons">movie  </i>  View Watchlist</button>
+</header>
+
 <section class="main-container">
     <section class="photo-container">
     </section>
     <section class="search-container">
 
-        <input id="search-input" type="text" placeholder="Keyword Search">
+        <input ng-model="$ctrl.keyword" id="search-input" type="text" placeholder="Keyword Search">
         <select class="dropdown">
 
             <option value="comedy">Comedy</option>
@@ -44,12 +46,19 @@
         </select>
 
 
-        <button id="search-btn">Search Movies</button>
+        <button ng-click="$ctrl.search($ctrl.keyword);" id="search-btn">Search Movies</button>
     </section>
     <section class="results-container">
         <p id="results-title">Movies</p>
-        <ul>
-            <li>Movie</li>
-        </ul>
+
+        <section class="single-result" ng-repeat="movie in $ctrl.movies">
+            <img class="result-img" ng-src = "https://image.tmdb.org/t/p/w92{{ movie.poster_path }}"  class="image">
+            <p class="result-title">Title: {{ movie.title }}</p>
+            <p class="result-genre">Genre: {{ movie.genre_ids }}</p>
+            <p class="result-rating">Rating: {{ movie.vote_average}} out of 10</p>
+            <p class="result-year">Release Year: {{ movie.release_date }}</p>
+            <i class="material-icons">star</i>
+        </section>
+
     </section>
 </section>
