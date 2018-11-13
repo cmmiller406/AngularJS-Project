@@ -1,12 +1,14 @@
 "use strict";
 
 
-const watchlistPage = {
-    templateUrl: "app/components/watchlist-page.html",
+const watchListPage = {
+    templateUrl: "app/components/watchlist-page.html"
+    
+    ,
     controller: ["ProjectService", function(ProjectService) {
         const vm= this;
         vm.showForm = () => {
-            vm.show= true;
+            vm.show= true
         }
     }]
 

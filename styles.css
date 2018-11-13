@@ -126,6 +126,47 @@ ul {
 i {
     margin-right: 5px;
 }
+/*------------------------------*/
+
+.wl-class {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.wl-title {
+    color: white;
+}
+
+.wl-genre {
+    color: white;
+}
+
+.wl-rating {
+    color: white;
+}
+
+.wl-year {
+    color: white;
+}
+
+.remove-btn {
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+  
+}
+
+
+.watchlist-test {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .single-result {
     display: flex;
@@ -176,5 +217,20 @@ i {
 
     height: 100px;
     align-items: center;
+
 }
 
+.icon-x {
+    display: flex;
+    justify-content: right;
+}
+
+.container-watchlist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.icon-x {
+    color: white;
+    display: flex;
+}
