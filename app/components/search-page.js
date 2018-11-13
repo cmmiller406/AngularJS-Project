@@ -2,9 +2,12 @@
 
 const searchPage = {
     templateUrl: "app/components/search-page.html",
-    controller: ["ProjectService", function(ProjectService) {
-        const vm= this;
-    }]
+    
+    bindings: {
+        search: "&",
+        movies: "<"
+
+    }
 };
 
 
