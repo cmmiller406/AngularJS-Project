@@ -63,8 +63,8 @@ header {
 .search-container {
     display: flex;
     align-items: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     
 }
 
@@ -110,12 +110,18 @@ header {
     margin: 10px;
 }
 
+.hidden-element {
+    display: none;
+}
+
 .results-container {
+    display: block;
     padding: 5px;
     border-radius: 5px;
     width: 90%;
     background-color: silver;
-    height: 80%;
+    height: 330px;
+    overflow: scroll;
 }
 
 ul {
@@ -179,7 +185,7 @@ i {
     align-items: center;
     font-family: "Space Mono";
     border-bottom: 1px dotted black;
-    padding-bottom: 8px;
+    padding-bottom: 15px;
     margin-top: 24px;
 }
 
@@ -193,7 +199,7 @@ i {
 
 
 
-.material-icons:hover{
+#star:hover {
     color: yellow;
     font-weight: bold;
     cursor: pointer;
@@ -202,9 +208,6 @@ i {
 
 }
 
-.material-icons:click {
-    color: yellow;
-}
 
 #results-title {
     font-weight: bolder;
@@ -229,6 +232,10 @@ i {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.watchlist-body {
+    background-image: url("theater.jpg");
 }
 .icon-x {
     color: white;
