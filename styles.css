@@ -8,17 +8,20 @@
 
 .wlclass {
     font-family: 'Archivo', sans-serif;
+}
   
 body {
- background-image: url("background.jpg");
- background-repeat: no-repeat;
- background-size: cover;
+    background-image: url("theater.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Archivo', sans-serif;
 }
 
 .main-container {
- display: flex;
- flex-direction: column;
- align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 nav {
@@ -27,52 +30,83 @@ nav {
     align-items: center;
     height: 60px;
     background-color: black;
-    color: white;
+    color: silver;
     padding: 10px;
 }
 
 #site-title {
    font-family: "Limelight";
    font-size: 50px;
+   color:maroon;
+   text-shadow: 1px 1px silver;
 }
 
 #watch-btn {
+    display: flex;
+    justify-content: center;
     height: 40px;
     width: 200px;
     border-radius: 5px;
+    background-color: maroon;
+    border: 1px solid silver;
+    color: silver;
 }
 
-input {
-    padding: 10px;
+.search-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+#search-input {
+    padding: 20px;
     margin: 10px;
     width: 700px;
     height: 16px;
     border: 2px solid black;
     border-radius: 5px;
+    background-color: silver;
+}
+
+#search-input::placeholder {
+    color: black;
+}
+
+.dropdown {
+    height: 30px;
+    margin-right: 10px;
+    background-color: silver;
 }
 
 #search-btn {
     width: 130px;
     height: 40px;
-    border: 2px solid black;
+    border: 1px solid silver;
     border-radius: 5px;
     padding: 10px;
+    background-color: maroon;
+    color: silver;
 }
 
 #results-title {
+    font-family: 'Limelight';
     font-size: 40px;
     color: black;
     margin: 10px;
 }
 
 .results-container {
-    background-color: white;
     padding: 5px;
     border-radius: 5px;
     width: 90%;
-    
+    background-color: silver;
 }
 
 ul {
     color: black;
 }
+
+i {
+    margin-right: 5px;
+}
+
