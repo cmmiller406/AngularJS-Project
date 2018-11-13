@@ -2,8 +2,19 @@
 
 const homePage = {
     templateUrl: "app/components/home-page.html",
-    controller: ["ProjectService", function(ProjectService) {
+    controller: ["FilmFinderFactory", function(FilmFinderFactory) {
         const vm= this;
+        vm.search = (keyword) => {
+            FilmFinderFactory.searchMovie(keyword).then((data) => {
+                console.log(data);
+              vm.movies = data.data.results;
+            });
+        };
+
+        vm.displayList = () => {
+
+        }
+    
     }]
 
 };

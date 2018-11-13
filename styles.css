@@ -110,5 +110,14 @@ ul {
 i {
     margin-right: 5px;
 }
-
+ 
+.single-result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+    height: 100px;
+    align-items: center;
+}
 
