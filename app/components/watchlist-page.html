@@ -1,11 +1,13 @@
-<p>Watchlist</p>
-<section class="wl-class" ng-show="$ctrl.show();">
-    <img class="wl-image" src= "">
-    <p class="wl-title">Title</p>
-    <p class="wl-genre">Genre</p>
-    <p class="wl-rating"></p>
-    <p class="wl-year">Year</p>
-    <button class=""ng-click="$ctrl.showForm();" ng-submit="$ctrl.showForm();">Remove From Watchlist</button>
+<section class="container-watchlist">
+    <p class="watchlist-test">Watchlist</p>
+    <p class="icon-x"><i class="material-icons">close</i></p>
 </section>
-    
-
+<section class="wl-class">
+    <img class="wl-image" src="">
+    <p class="wl-title">Title:</p>
+    <p class="wl-genre">Genre:</p>
+    <p class="wl-rating">Rating:</p>
+    <p class="wl-year">Year:</p>
+    <button class="remove-btn" ng-click="$ctrl.showForm();" ng-submit="$ctrl.showForm();">Remove<i class='far fa-minus-square'></i>
+    </button>
+</section>

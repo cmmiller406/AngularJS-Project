@@ -9,7 +9,7 @@ angular
                 template: "<home-page></home-page>"
             })
             .when("/watchlist-page", {
-                template: "<watchlist-page></watchlist-page>"
+                template: "<watch-list-page></watch-list-page>"
             })
             .when("/results-list", {
                 template: "<results-list></results-list>"

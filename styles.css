@@ -110,5 +110,65 @@ ul {
 i {
     margin-right: 5px;
 }
+/*------------------------------*/
 
+.wl-class {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
+}
+
+.wl-title {
+    color: white;
+}
+
+.wl-genre {
+    color: white;
+}
+
+.wl-rating {
+    color: white;
+}
+
+.wl-year {
+    color: white;
+}
+
+.remove-btn {
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+  
+}
+
+.searchtest {
+    color: white;
+}
+
+.watchlist-test {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.results-test {
+    color: white;
+}
+
+.icon-x {
+    display: flex;
+    justify-content: right;
+}
+
+.container-watchlist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.icon-x {
+    color: white;
+    display: flex;
+}
