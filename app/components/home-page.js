@@ -14,6 +14,10 @@ const homePage = {
         vm.displayList = () => {
 
         }
+
+        vm.expandInfo = () => {
+            
+        }
     
     }]
 

@@ -36,15 +36,6 @@
             <option value="1900s">1900s</option>
             
         </select>
-        <select class="dropdown">
-            <option value="g">G</option>
-            <option value="pg">PG</option>
-            <option value="pg-13">PG-13</option>
-            <option value="r">R</option>
-            <option value="nc-17">NC-17</option>
-            
-        </select>
-
 
         <button ng-click="$ctrl.search($ctrl.keyword);" id="search-btn">Search Movies</button>
     </section>
@@ -53,11 +44,11 @@
 
         <section class="single-result" ng-repeat="movie in $ctrl.movies">
             <img class="result-img" ng-src = "https://image.tmdb.org/t/p/w92{{ movie.poster_path }}"  class="image">
-            <p class="result-title">Title: {{ movie.title }}</p>
-            <p class="result-genre">Genre: {{ movie.genre_ids }}</p>
-            <p class="result-rating">Rating: {{ movie.vote_average}} out of 10</p>
-            <p class="result-year">Release Year: {{ movie.release_date }}</p>
-            <i class="material-icons">star</i>
+            <p ng-click="$ctrl.expandInfo();" class="result-title">{{ movie.title }}</p>
+            <p class="result-genre"> Genre: {{ movie.genre_ids }}</p>
+            <p class="result-rating">{{ movie.vote_average}} out of 10</p>
+            <p class="result-year">{{ movie.release_date | date: 'yyyy'}}</p>
+            <i class="material-icons" id="star">star</i>
         </section>
 
     </section>
