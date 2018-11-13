@@ -133,6 +133,7 @@ i {
     justify-content: space-between;
     width: 95%;
     margin: 0 auto;
+
     height: 150px;
     align-items: center;
     font-family: "Space Mono";
@@ -172,5 +173,8 @@ i {
 
 .result-title {
     font-size: 2em;
+
+    height: 100px;
+    align-items: center;
 }
 
