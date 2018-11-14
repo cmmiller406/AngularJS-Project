@@ -6,8 +6,8 @@ const homePage = {
         const vm= this;
         vm.watchList = [];
         vm.isOn =false;
-        vm.search = (keyword) => {
-            FilmFinderFactory.searchMovie(keyword).then((data) => {
+        vm.search = (searchCriteria) => {
+            FilmFinderFactory.searchMovie(searchCriteria).then((data) => {
                 vm.movies = data;
                 if (vm.isOn === false) {
                     vm.isOn = true;
@@ -20,16 +20,7 @@ const homePage = {
         vm.displayList = () => {
             FilmFinderFactory.loadWatch();
         };
-
-
-        vm.addMovie = (movie) => {
-            vm.watchList.push(angular.copy(movie));
-            console.log(vm.watchList);
-        };
-
-
     }]
-
 };
 
 

@@ -5,17 +5,14 @@
 
 <section class="main-container">
 
-   
     <search-page 
-    search= "$ctrl.search(keyword);"
+    search= "$ctrl.search(searchCriteria)"
     ></search-page>
 
     <results-list
     movies = "$ctrl.movies"
-    add-movie="$ctrl.addMovie(movie);"
     is-on = "$ctrl.isOn"
-    search= "$ctrl.search(keyword)"
+    search= "$ctrl.search(searchCriteria)"
     ></results-list>
-
 
 </section>

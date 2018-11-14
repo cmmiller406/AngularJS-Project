@@ -194,7 +194,6 @@ i {
     overflow: scroll;
 }
 
-
 .single-result {
     display: flex;
     flex-direction: row;
@@ -226,18 +225,12 @@ i {
     cursor: pointer;
 }
 
-
-
-
-
 .result-title {
     font-size: 2em;
     height: 100px;
-    width: 200px;
+    width: 350px;
     align-items: center;
 }
-
-
 
 .wl-heading {
     font-family: 'Limelight';
@@ -248,9 +241,6 @@ i {
     border-bottom: 1px solid black;
     font-weight: bolder;
 }
-
-
-
 
 .wl-img {
     border-radius: 5px;
@@ -272,9 +262,6 @@ i {
     margin-top: 24px;
 }
 
-
-
-
 .container-watchlist {
         display: block;
         padding: 5px;
@@ -284,9 +271,6 @@ i {
         height: 330px;
         overflow: scroll;
 }
-
-
-
 
 .icon-x {
     color: white;

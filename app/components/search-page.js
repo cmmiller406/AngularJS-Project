@@ -4,9 +4,7 @@ const searchPage = {
     templateUrl: "app/components/search-page.html",
     
     bindings: {
-        search: "&",
-        movies: "<"
-
+        search: "&"
     }
 };
 

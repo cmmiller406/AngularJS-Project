@@ -2,7 +2,7 @@
 
     <p id="results-title">Movies</p>
 
-    <section class="single-result" ng-repeat="movie in $ctrl.movies">
+    <section expand-on-focus class="single-result" ng-repeat="movie in $ctrl.movies">
         <img class="result-img" ng-src="https://image.tmdb.org/t/p/w92{{ movie.poster_path }}" class="image">
         <p class="result-title">{{ movie.title }}</p>
         <p class="result-genre">  
