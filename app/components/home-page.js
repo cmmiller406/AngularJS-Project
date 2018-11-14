@@ -21,10 +21,12 @@ const homePage = {
             FilmFinderFactory.loadWatch();
         };
 
+
         vm.addMovie = (movie) => {
             vm.watchList.push(angular.copy(movie));
             console.log(vm.watchList);
         };
+
 
     }]
 

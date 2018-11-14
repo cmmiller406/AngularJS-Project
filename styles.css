@@ -10,7 +10,7 @@ body {
     background-image: url("theater.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: "Space Mono";
+    
 }
 
 .main-container {
@@ -101,11 +101,14 @@ header {
     cursor: pointer;
 }
 
-#results-title {
+#results-title{
     font-family: 'Limelight';
     font-size: 40px;
     color: black;
     margin: 10px;
+    font-weight: bolder;
+    margin-bottom: 40px;
+    border-bottom: 1px solid black;
 }
 
 .hidden-element {
@@ -132,7 +135,7 @@ i {
 }
 /*------------------------------*/
 
-.wl-class-popup {
+/* .wl-class-popup {
     color: white;
     background-color: silver;
     display: flex;
@@ -141,43 +144,54 @@ i {
     align-self: center;
     height: 30vh;
     width: 80%;
-}
+} */
 
 .wl-title {
-    color: black;
-    font-family: 'Limelight';
+    font-size: 2em;
+    height: 100px;
+    align-items: center;
+    
 }
 
-.wl-genre {
+/* .wl-genre {
     color: black;
     font-family: 'Limelight';
-}
+} */
 
-.wl-rating {
+/* .wl-rating {
     color: black;
     font-family: 'Limelight';
-}
+} */
 
-.wl-year {
+/* .wl-year {
     color: black;
     font-family: 'Limelight';
-}
+} */
 
 .remove-btn {
     color: white;
     background-color: black;
-    border-radius: 15px;
-
-    width: 130px;
-    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
   
 }
 
 .wl-background {
     background-image: url("theater.jpg");
-    /* display: flex;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 40px; */
+    height: 98%;
+    width: 98%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: silver;
+    height: 330px;
+    overflow: scroll;
 }
 
 
@@ -212,11 +226,9 @@ i {
     cursor: pointer;
 }
 
-#results-title {
-    font-weight: bolder;
-    margin-bottom: 40px;
-    border-bottom: 1px solid black;
-}
+
+
+
 
 .result-title {
     font-size: 2em;
@@ -225,24 +237,69 @@ i {
     align-items: center;
 }
 
-/* .icon-x {
-    display: flex;
-    justify-content: right;
-} */
 
-/* .container-watchlist {
+
+.wl-heading {
+    font-family: 'Limelight';
+    font-size: 40px;
+    color: black;
+    margin: 10px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid black;
+    font-weight: bolder;
+}
+
+
+
+
+.wl-img {
+    border-radius: 5px;
+    height: 140px;
+    width: 140px;
+}
+
+.wl-class-popup {
     display: flex;
     flex-direction: row;
-
     justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+    height: 150px;
+    align-items: center;
+    font-family: "Space Mono";
+    border-bottom: 1px dotted black;
+    padding-bottom: 15px;
+    margin-top: 24px;
 }
 
-.watchlist-body {
-    background-image: url("theater.jpg");
+
+
+
+.container-watchlist {
+        display: block;
+        padding: 5px;
+        border-radius: 5px;
+        width: 90%;
+        background-color: silver;
+        height: 330px;
+        overflow: scroll;
 }
+
+
+
 
 .icon-x {
     color: white;
+    text-shadow: 2px 2px black;
     display: flex;
     flex-direction: row-reverse;
+    font-size: 2em;
+}
+
+.icon-x:hover {
+    cursor: pointer
+}
+
+button:hover {
+    cursor: pointer;
 }
