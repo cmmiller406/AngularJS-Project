@@ -7,12 +7,14 @@ const watchListPage = {
     ,
     controller: ["FilmFinderFactory", function(FilmFinderFactory) {
         const vm= this;
+        vm.wlArray = FilmFinderFactory.getMovieList();
         vm.displayHome = () => {
             FilmFinderFactory.loadHome();
-
         };
+        vm.removeItem = (index) => {
+            FilmFinderFactory.removeFav(index);
+        }   
     }]
-
 };
 
 

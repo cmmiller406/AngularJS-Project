@@ -80,15 +80,25 @@ function FilmFinderFactory($http, $location) {
             "id": 37,
             "name": "Western"
         }
+
+
     ];
+
+
+
 
     const loadWatch = () => {
         $location.path("/watchlist-page");
     };
 
+    const getMovieList = () => {
+        return wlArray;
+    };
+
     const loadHome = () => {
         $location.path("/home-page");
     };
+
 
     const searchMovie = (searchCriteria) => {
         // ${searchCriteria.genre}
@@ -111,12 +121,40 @@ function FilmFinderFactory($http, $location) {
         });
     };
 
+   
+    const wlArray = [];
+    const addMovieToList = (movie) => {
+        wlArray.unshift(movie);
+        // console.log(wlArray);
+        console.log(movie);
+    };
+
+
+    const removeFav = (index) => {
+        wlArray.splice (index, 1);
+
+    }
+
+
+
+
     return {
         searchMovie,
         loadWatch,
-        loadHome
-    }
+        loadHome,
+        removeFav,
+        addMovieToList,
+        getMovieList
+
+
+   }
+
 }
+
+
+
+
+
 
 angular
     .module("App")

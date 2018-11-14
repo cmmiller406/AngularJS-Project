@@ -4,7 +4,6 @@ const homePage = {
     templateUrl: "app/components/home-page.html",
     controller: ["FilmFinderFactory", function(FilmFinderFactory) {
         const vm= this;
-        vm.watchList = [];
         vm.isOn =false;
         vm.search = (searchCriteria) => {
             FilmFinderFactory.searchMovie(searchCriteria).then((data) => {
@@ -20,6 +19,7 @@ const homePage = {
         vm.displayList = () => {
             FilmFinderFactory.loadWatch();
         };
+
     }]
 };
 
