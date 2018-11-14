@@ -5,8 +5,8 @@ const homePage = {
     controller: ["FilmFinderFactory", function(FilmFinderFactory) {
         const vm= this;
         vm.isOn =false;
-        vm.search = (keyword) => {
-            FilmFinderFactory.searchMovie(keyword).then((data) => {
+        vm.search = (searchCriteria) => {
+            FilmFinderFactory.searchMovie(searchCriteria).then((data) => {
                 vm.movies = data;
                 if (vm.isOn === false) {
                     vm.isOn = true;
@@ -20,11 +20,7 @@ const homePage = {
             FilmFinderFactory.loadWatch();
         };
 
-
-
-
     }]
-
 };
 
 

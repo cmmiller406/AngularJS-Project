@@ -81,13 +81,30 @@ function FilmFinderFactory($http, $location) {
             "name": "Western"
         }
 
+
     ];
 
 
-    const searchMovie = (keyword) => {
+
+
+    const loadWatch = () => {
+        $location.path("/watchlist-page");
+    };
+
+    const getMovieList = () => {
+        return wlArray;
+    };
+
+    const loadHome = () => {
+        $location.path("/home-page");
+    };
+
+
+    const searchMovie = (searchCriteria) => {
+        // ${searchCriteria.genre}
         return $http({
             method: "GET",
-            url: `https://api.themoviedb.org/3/search/movie?api_key=a6e19e40ea2fd9ab20c2b6edf4b56aa5&query=${keyword}`,
+            url: `https://api.themoviedb.org/3/search/movie?api_key=a6e19e40ea2fd9ab20c2b6edf4b56aa5&query=${searchCriteria.keyword}&year=${Number(searchCriteria.primary_release_year)}`,
         }).then((data) => {
             let movies = data.data.results;
             for (let movie of movies) {
@@ -99,27 +116,12 @@ function FilmFinderFactory($http, $location) {
                     }
                 }
             }
+            console.log(movies);
             return movies;
         });
     };
 
-
-
-
-
-    const loadWatch = () => {
-        $location.path("/watchlist-page");
-
-    };
-
-    const getMovieList = () => {
-        return wlArray;
-    };
-
-    const loadHome = () => {
-        $location.path("/home-page");
-    };
-
+   
     const wlArray = [];
     const addMovieToList = (movie) => {
         wlArray.unshift(movie);
@@ -144,10 +146,15 @@ function FilmFinderFactory($http, $location) {
         addMovieToList,
         getMovieList
 
-    }
 
+   }
 
 }
+
+
+
+
+
 
 angular
     .module("App")

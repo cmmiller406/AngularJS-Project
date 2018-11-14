@@ -3,7 +3,6 @@
 const resultsList = {
     templateUrl: "app/components/results-list.html",
     bindings: {
-        addMovie: "&",
         isOn: "<",
         search: "&",
         movies: "<"

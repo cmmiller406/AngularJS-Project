@@ -159,7 +159,6 @@ i {
 
 
 
-
 .single-result {
     display: flex;
     flex-direction: row;
@@ -193,19 +192,13 @@ i {
     cursor: pointer;
 }
 
-
-
-
-
 .result-title {
     font-family: "Kanit";
     font-size: 2em;
     height: 100px;
-    width: 200px;
+    width: 350px;
     align-items: center;
 }
-
-
 
 .wl-heading {
     font-family: 'Limelight';
@@ -216,9 +209,6 @@ i {
     border-bottom: 1px solid black;
     font-weight: bolder;
 }
-
-
-
 
 .wl-img {
     border-radius: 5px;
@@ -240,9 +230,6 @@ i {
     margin-top: 24px;
 }
 
-
-
-
 .container-watchlist {
     display: block;
     margin: 0 auto;
@@ -254,9 +241,6 @@ i {
     overflow: scroll;
     margin-top: 27px;
 }
-
-
-
 
 .icon-x {
     color: white;
