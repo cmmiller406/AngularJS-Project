@@ -5,11 +5,12 @@ const watchListPage = {
     templateUrl: "app/components/watchlist-page.html"
     
     ,
-    controller: ["ProjectService", function(ProjectService) {
+    controller: ["FilmFinderFactory", function(FilmFinderFactory) {
         const vm= this;
-        vm.showForm = () => {
-            vm.show= true
-        }
+        vm.displayHome = () => {
+            FilmFinderFactory.loadHome();
+
+        };
     }]
 
 };

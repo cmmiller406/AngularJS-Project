@@ -1,6 +1,6 @@
 "use strict";
 
-function FilmFinderFactory($http) {
+function FilmFinderFactory($http, $location) {
     let jsonPayload = null;
 
     /*{
@@ -86,6 +86,18 @@ function FilmFinderFactory($http) {
     }
     
 */
+
+    const loadWatch = () => {
+        $location.path("/watchlist-page");
+
+    };
+
+    const loadHome = () => {
+        $location.path("/home-page");
+    };
+
+
+
     const searchMovie = (keyword) => {
 
         return $http({
@@ -97,33 +109,19 @@ function FilmFinderFactory($http) {
         });
     };
 
+  
+
+
+
     return {
-        searchMovie
-    };
-function FilmFinderFactory($http, $location) {
-  let jsonPayload = null;   
+        searchMovie,
+        loadWatch,
+        loadHome
+        
+    }
 
-  const loadWatch = () => {
-    $location.path("/watchlist-page");
 
-  };
-
-  const searchMovie = (keyword) => {
- 
-    return $http({
-      method: "GET", 
-      url: `https://api.themoviedb.org/3/search/movie?api_key=a6e19e40ea2fd9ab20c2b6edf4b56aa5&query=${keyword}`,
-    }).then((data) => {
-      jsonPayload = data;
-      return jsonPayload;
-    });
-  };
-
-  return {
-    searchMovie,
-    loadWatch
-  };
-}
+};
 
 
 angular

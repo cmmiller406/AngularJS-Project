@@ -1,6 +1,5 @@
 <header>
     <p id="site-title">Film Finder</p>
-
     <button ng-click="$ctrl.displayList();" id="watch-btn"><i class="material-icons">movie  </i>  View Watchlist</button>
 </header>
 
@@ -22,7 +21,7 @@
             <p class="result-genre"> Genre: {{ movie.genre_ids }}</p>
             <p class="result-rating">{{ movie.vote_average}} out of 10</p>
             <p class="result-year">{{ movie.release_date | date: 'yyyy'}}</p>
-            <i class="material-icons" id="star">star</i>
+            <i ng-click= "" class="material-icons" id="star">star</i>
 
         </section>
 
