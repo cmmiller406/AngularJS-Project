@@ -7,7 +7,13 @@ const resultsList = {
         isOn: "<",
         search: "&",
         movies: "<"
-    }
+    },
+    controller: ["FilmFinderFactory", function(FilmFinderFactory) {
+        const vm = this;
+        vm.addMovieToList = (movie) => {
+            FilmFinderFactory.addMovieToList(movie);
+        };
+    }]
 
 };
 

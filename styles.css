@@ -135,38 +135,15 @@ i {
 }
 /*------------------------------*/
 
-/* .wl-class-popup {
-    color: white;
-    background-color: silver;
-    display: flex;
-    justify-content: space-evenly;
-    border-radius: 5px;
-    align-self: center;
-    height: 30vh;
-    width: 80%;
-} */
+
 
 .wl-title {
+    font-family: "Kanit";
     font-size: 2em;
     height: 100px;
     align-items: center;
     
 }
-
-/* .wl-genre {
-    color: black;
-    font-family: 'Limelight';
-} */
-
-/* .wl-rating {
-    color: black;
-    font-family: 'Limelight';
-} */
-
-/* .wl-year {
-    color: black;
-    font-family: 'Limelight';
-} */
 
 .remove-btn {
     color: white;
@@ -180,19 +157,7 @@ i {
   
 }
 
-.wl-background {
-    background-image: url("theater.jpg");
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 98%;
-    width: 98%;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: silver;
-    height: 330px;
-    overflow: scroll;
-}
+
 
 
 .single-result {
@@ -231,6 +196,7 @@ i {
 
 
 .result-title {
+    font-family: "Kanit";
     font-size: 2em;
     height: 100px;
     width: 200px;
@@ -276,13 +242,15 @@ i {
 
 
 .container-watchlist {
-        display: block;
-        padding: 5px;
-        border-radius: 5px;
-        width: 90%;
-        background-color: silver;
-        height: 330px;
-        overflow: scroll;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 5px;
+    width: 90%;
+    background-color: silver;
+    height: 530px;
+    overflow: scroll;
+    margin-top: 27px;
 }
 
 
@@ -302,4 +270,8 @@ i {
 
 button:hover {
     cursor: pointer;
+}
+
+.yellow-back {
+    color: yellow;
 }
