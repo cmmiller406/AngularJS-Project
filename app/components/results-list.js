@@ -2,9 +2,12 @@
 
 const resultsList = {
     templateUrl: "app/components/results-list.html",
-    controller: ["ProjectService", function(ProjectService) {
-        const vm= this;
-    }]
+    bindings: {
+        addMovie: "&",
+        isOn: "<",
+        search: "&",
+        movies: "<"
+    }
 
 };
 
