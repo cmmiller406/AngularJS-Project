@@ -7,23 +7,15 @@
 
    
     <search-page 
-    movies = "movies"
     search= "$ctrl.search(keyword);"
     ></search-page>
-    <section ng-class = "{'results-container': $ctrl.isOn === true}" class="hidden-element">
 
-        <p id="results-title">Movies</p>
+    <results-list
+    movies = "$ctrl.movies"
+    add-movie="$ctrl.addMovie(movie);"
+    is-on = "$ctrl.isOn"
+    search= "$ctrl.search(keyword)"
+    ></results-list>
 
-        <section class="single-result" ng-repeat="movie in $ctrl.movies">
-            <img class="result-img" ng-src = "https://image.tmdb.org/t/p/w92{{ movie.poster_path }}"  class="image">
 
-            <p ng-click="$ctrl.expandInfo();" class="result-title">{{ movie.title }}</p>
-            <p class="result-genre"> Genre: {{ movie.genre_ids }}</p>
-            <p class="result-rating">{{ movie.vote_average}} out of 10</p>
-            <p class="result-year">{{ movie.release_date | date: 'yyyy'}}</p>
-            <i ng-click= "" class="material-icons" id="star">star</i>
-
-        </section>
-
-    </section>
 </section>

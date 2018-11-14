@@ -1,12 +1,10 @@
 "use strict";
 
-function FilmFinderFactory($http, $location) {
-    let jsonPayload = null;
+    function FilmFinderFactory($http, $location) {
+        let jsonPayload = null;
+        const genres = [
 
-    /*{
-        "genres": [
             {
-                "28":"Action"
                 "id": 28,
                 "name": "Action"
             },
@@ -82,10 +80,36 @@ function FilmFinderFactory($http, $location) {
                 "id": 37,
                 "name": "Western"
             }
+
+        ];
+
+        const loadWatch = () => {
+            $location.path("/watchlist-page");
+        };
+
+        const searchMovie = (keyword) => {
+            return $http({
+                method: "GET",
+                url: `https://api.themoviedb.org/3/search/movie?api_key=a6e19e40ea2fd9ab20c2b6edf4b56aa5&query=${keyword}`,
+            }).then((data) => {
+                let movies = data.data.results;
+                for (let movie of movies) {
+                    for (let i = 0; i < movie.genre_ids.length; i++) {
+                        for (let x = 0; x < genres.length; x++) {
+                            if (genres[x].id === movie.genre_ids[i]) {
+                                movie.genre_ids[i] = genres[x].name;
+                            }
+                        }
+                    }
+                }
+                return movies;
+            });
+        };
+
         ]
     }
     
-*/
+
 
     const loadWatch = () => {
         $location.path("/watchlist-page");
@@ -123,7 +147,6 @@ function FilmFinderFactory($http, $location) {
 
 };
 
-
-angular
-    .module("App")
-    .factory("FilmFinderFactory", FilmFinderFactory);
+    angular
+        .module("App")
+        .factory("FilmFinderFactory", FilmFinderFactory);

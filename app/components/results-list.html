@@ -1,1 +1,19 @@
-<p class="results-test">Results</p>
+<section class="hidden-element" ng-class="{'results-container': $ctrl.isOn === true}" >
+
+    <p id="results-title">Movies</p>
+
+    <section class="single-result" ng-repeat="movie in $ctrl.movies">
+        <img class="result-img" ng-src="https://image.tmdb.org/t/p/w92{{ movie.poster_path }}" class="image">
+        <p class="result-title">{{ movie.title }}</p>
+        <p class="result-genre">  
+            <ul>
+                <li ng-repeat="genre in movie.genre_ids">{{ genre }}</li>
+            </ul>
+        </p>
+        <p class="result-rating">{{ movie.vote_average}} out of 10</p>
+        <p class="result-year">{{ movie.release_date | date: 'yyyy'}}</p>
+        <i ng-click="$ctrl.addMovie({ movie: $ctrl.movie });" class="material-icons" id="star">star</i>
+
+    </section>
+
+</section>

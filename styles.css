@@ -47,6 +47,7 @@ header {
     background-color: maroon;
     border: 1px solid silver;
     color: silver;
+    font-size: 20px;
 }
 
 #watch-btn:hover {
@@ -59,8 +60,6 @@ header {
     align-items: center;
     margin-top: 30px;
     margin-bottom: 30px;
-    
-
 }
 
 #search-input {
@@ -71,16 +70,19 @@ header {
     border: 2px solid black;
     border-radius: 5px;
     background-color: silver;
+    font-size: 20px;
 }
 
 #search-input::placeholder {
     color: black;
+    font-size: 18px;
 }
 
 .dropdown {
     height: 30px;
     margin-right: 10px;
     background-color: silver;
+    font-size: 14px;
 }
 
 #search-btn {
@@ -91,6 +93,7 @@ header {
     padding: 10px;
     background-color: maroon;
     color: silver;
+    font-size: 13px;
 }
 
 #search-btn:hover {
@@ -98,7 +101,7 @@ header {
     cursor: pointer;
 }
 
-#results-title {
+#results-title{
     font-family: 'Limelight';
     font-size: 40px;
     color: black;
@@ -116,7 +119,7 @@ header {
     display: block;
     padding: 5px;
     border-radius: 5px;
-    width: 90%;
+    width: 1200px;
     background-color: silver;
     height: 330px;
     overflow: scroll;
@@ -177,11 +180,6 @@ i {
   
 }
 
-
-
-
-
-
 .wl-background {
     background-image: url("theater.jpg");
     display: flex;
@@ -217,13 +215,9 @@ i {
     width: 148px;
 }
 
-
 #star {
     font-size: 70px;
 }
-
-
-
 
 
 #star:hover {
@@ -235,9 +229,11 @@ i {
 
 
 
+
 .result-title {
     font-size: 2em;
     height: 100px;
+    width: 200px;
     align-items: center;
 }
 
