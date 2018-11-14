@@ -172,6 +172,8 @@ i {
     border-bottom: 1px dotted black;
     padding-bottom: 15px;
     margin-top: 24px;
+    z-index: -1;
+    
 }
 
 .result-img {
@@ -275,3 +277,8 @@ button:hover {
 .yellow-back {
     color: yellow;
 }
+
+
+
+
+
