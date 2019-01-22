@@ -197,7 +197,7 @@ i {
     padding-bottom: 15px;
     margin-top: 24px;
     z-index: -1;
-    
+    flex-wrap: wrap;
 }
 
 .result-img {
@@ -205,6 +205,11 @@ i {
     height: 138px;
     width: 92px;
     position: relative;
+
+    
+}
+.summary {
+    display: none;
 }
 
 .more-info {
@@ -219,8 +224,22 @@ i {
 
 }
 
+.result-img:hover {
+    cursor: pointer;
+}
+
 .result-img:hover .more-info {
     display: inline;
+}
+
+.result-img:hover .movie-pic {
+    -webkit-filter: brightness(15%);
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+
 }
 
 
