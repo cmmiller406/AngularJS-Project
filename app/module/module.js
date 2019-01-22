@@ -17,5 +17,5 @@ angular
             .when("/search-page", {
                 template: "<search-page></search-page>"
             })
-            .otherwise({redirectTo: "/home-page"})
+            .otherwise({redirectTo:"/home-page"})
     }]);

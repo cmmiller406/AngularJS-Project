@@ -121,6 +121,9 @@ function FilmFinderFactory($http, $location) {
         });
     };
 
+    // let year1= movie.primary_release_year;
+    // let year2 = movies.release_date
+
    
     const wlArray = [];
     const addMovieToList = (movie) => {
