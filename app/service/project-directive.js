@@ -1,16 +1,22 @@
 "use strict";
 
-function expandOnFocus () {
+function showSummary () {
     return {
         restrict: "A",
         link: function($scope, $element, $attr) {
 
         
-            $element.on("toggle", () => {
-                console.log("Toggle worked!")
-                $(".single-result").css("height", "40px");
-                $element.css("width", "500px");
-                $element.css("font-size", "30px");
+            $element.on("click", () => {
+                
+                let result = document.getElementsByClassName("single-result");
+                let wrappedResult = angular.element(result);
+                console.log("Toggle worked!");
+                
+                wrappedResult.css("height", "400px");
+                let summaryResult = document.getElementsByClassName("summary");
+                let wrappedSummaryResult = angular.element(summaryResult);
+                wrappedSummaryResult.css("display", "inline");
+        
 
             });
         }
@@ -20,4 +26,4 @@ function expandOnFocus () {
 
 angular 
     .module("App")
-    .directive("expandOnFocus", expandOnFocus);
+    .directive("showSummary", showSummary);

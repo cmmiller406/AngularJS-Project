@@ -9,6 +9,15 @@ const resultsList = {
     },
     controller: ["FilmFinderFactory", function(FilmFinderFactory) {
         const vm = this;
+        
+        /*$(".result-img").on("click", () => {
+                
+            console.log("Toggle worked!");
+            $(".single-result").css("height", "400px");
+            $(".summary").css("display", "inline");
+
+        });*/
+        
         vm.addMovieToList = (movie) => {
             FilmFinderFactory.addMovieToList(movie);
         };

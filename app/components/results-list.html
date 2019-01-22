@@ -2,11 +2,11 @@
 
     <p id="results-title">Movies</p>
 
-    <section class="single-result" ng-repeat="movie in $ctrl.movies">
+    <section class="single-result" ng-repeat="movie in $ctrl.movies track by $index">
 
-        <section class= "result-img">
+        <section show-summary class= "result-img">
             <img class="movie-pic" ng-src="https://image.tmdb.org/t/p/w92{{ movie.poster_path }}" class="image">
-            <p class="more-info">Click for summary.</p>
+            <p class="more-info">Click for summary</p>
         </section>
 
         <p class="result-title">{{ movie.title }}</p>
@@ -18,6 +18,10 @@
         <p class="result-rating">{{ movie.vote_average}} out of 10</p>
         <p class="result-year">{{ movie.release_date | date: 'yyyy'}}</p>
         <i yellow ng-click="$ctrl.addMovieToList(movie);" class="material-icons" id="star">star</i>
+        <section class="summary">
+            <h5>Summary:</h5>
+            <p>{{ movie.overview }}</p>
+        </section>
     </section>
 
 </section>
