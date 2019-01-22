@@ -202,8 +202,25 @@ i {
 
 .result-img {
     border-radius: 5px;
-    height: 148px;
-    width: 148px;
+    height: 138px;
+    width: 92px;
+    position: relative;
+}
+
+.more-info {
+    display: none;
+    margin: 0px;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+
+}
+
+.result-img:hover .more-info {
+    display: inline;
 }
 
 
